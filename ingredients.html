@@ -17,13 +17,57 @@
 
     <h1>How To Make A Cocktail</h1>
 
-    <div id="instructions ">
-        <p>Select each ingredient you have readily available by clicking each picture below</p>
-        <p>Be sure to select at least one alcohol and one mixer</p>
-        <p>Press the "Make My Cocktail" button to search your available cocktails</p>
+    <div id="instructions">
+        <p>1. Select each ingredient you have readily available by clicking each picture below</p>
+        <p>2. Be sure to select at least one alcohol and one mixer</p>
+        <p>3. Press the "Make My Cocktail" button to search your available cocktails</p>
     </div>
 
+    <fieldset class="main">
+        <legend id="mainText">Alcohol (Select At Least One)</legend>
+    <section id="liquors">
+        <div class="category">Liquors/Spirits</div>
+        <div class="ingredient">
+            <label for="brandy">
+                <img src="images/icons8-brandy-64.png" alt="Brandy">
+                <input type="checkbox" id="brandy" name="liquor" value="brandy">
+                <span>Brandy</span>
+            </label>
+        </div>
+        <div class="ingredient">
+            <label for="gin">
+                <img src="images/gin.png" alt="Gin">
+                <input type="checkbox" id="gin" name="liquor" value="gin">
+                <span>Gin</span>
+            </label>
+        </div>
+        <div class="ingredient">
+            <label for="rum">
+                <img src="images/rum.png" alt="Rum">
+                <input type="checkbox" id="rum" name="liquor" value="rum">
+                <span>Rum</span>
+            </label>
+        </div>
+        <div class="ingredient">
+            <label for="tequila">
+                <img src="images/tequila.png" alt="Tequila">
+                <input type="checkbox" id="tequila" name="liquor" value="tequila">
+                <span>Tequila</span>
+            </label>
+        </div>
+        <div class="ingredient">
+            <label for="vodka">
+                <img src="images/vodka.png" alt="Vodka">
+                <input type="checkbox" id="vodka" name="liquor" value="vodka">
+                <span>Vodka</span>
+            </label>
+        </div>
+        <!-- Repeat for other ingredients -->
+    </section>
+    </fieldset>
+    
 
+    
 </body>
 
 </html>
