@@ -30,7 +30,6 @@ body {
   flex: 1;
   text-align: center;
   border-right: 1px solid #555;
-
 }
 
 #topbar a {
@@ -42,40 +41,74 @@ body {
   transition: background-color 0.3s;
 }
 
-#navbar a:hover {
+#topbar a:hover {
   background-color: #555;
 }
 
-
-h1, h2, h3 {
+h1, h2, h3, h4, h5, h6 {
   color: white;
   text-align: center;
   font-size: 2.5em;
-  margin-top: 0;
-  padding-top: 30px;
   margin-top: 50px;
+  padding-top: 30px;
   padding-bottom: 20px;
-  border-bottom: 3px solid white;
+}
+
+h1{
+  border: 5px solid #ffffff;
+}
+
+h2 {
   border: 5px solid #d65656;
 }
 
-#instructions {
-  margin-top: 60px;
-  padding: 20px;
-  font-size: 20px;
+h3 {
+  border: 5px solid rgba(0, 8, 255, 0.5);
 }
 
-#banner {
+h4 {
+  border: 5px solid rgba(16, 164, 0, 0.5);
+}
+
+h5 {
+  border: 5px solid rgba(23, 252, 230, 0.5);
+}
+
+#instructions {
+  align-items: center;
+  padding: 40px;
+  margin: 20px auto;
+  background: #353a40;
+  border-radius: 20px;
+  max-width: 1200px;
+}
+
+#banner, #banner2, #banner3, #banner4 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   padding: 40px;
   margin: 20px auto;
-  background: #353a40; 
+  background: #353a40;
   border-radius: 20px;
+  max-width: 1200px;
+}
+
+#banner {
   box-shadow: 0 9px 15px rgba(212, 86, 86, 0.5);
-  max-width: 1200px; 
+}
+
+#banner2 {
+  box-shadow: 0 9px 15px rgba(0, 8, 255, 0.5);
+}
+
+#banner3 {
+  box-shadow: 0 9px 15px rgba(16, 164, 0, 0.5);
+}
+
+#banner4 {
+  box-shadow: 0 9px 15px rgba(23, 252, 230, 0.5);
 }
 
 .category {
@@ -99,7 +132,6 @@ h1, h2, h3 {
   border-radius: 10px;
   padding: 5px;
   transition: transform 0.3s;
-  margin-bottom: 10;
 }
 
 .ingredient label:hover {
@@ -109,8 +141,8 @@ h1, h2, h3 {
 .ingredient img {
   display: block;
   margin: 0 auto;
-  width: 128px;
-  height: 128px;
+  width: 100px;
+  height: 100px;
 }
 
 .ingredient input[type="checkbox"] {
@@ -126,11 +158,10 @@ h1, h2, h3 {
 }
 
 footer {
+  margin-top: 60px;
   text-align: center;
   position: relative;
   bottom: 0;
-  width: 100%;
   background-color: #333;
-  text-align: center;
   padding: 1em;
 }
