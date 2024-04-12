@@ -1,18 +1,9 @@
 body {
-  font-family: Popins, sans-serif;
+  font-family: 'Poppins', sans-serif;
   background: #252839;
+  color: #fff;
   margin: 0;
   padding: 0;
-}
-
-h1 {
-  color: white;
-  text-align: center;
-  font-size: 2.5em;
-  margin-top: 0;
-  padding-top: 30px;
-  padding-bottom: 20px;
-  border-bottom: 3px solid white;
 }
 
 #topbar {
@@ -55,24 +46,36 @@ h1 {
   background-color: #555;
 }
 
-#instructions {
 
+h1, h2, h3 {
   color: white;
-  text-align: left;
-  font-size: 20px;
-  padding-top: 0px;
+  text-align: center;
+  font-size: 2.5em;
+  margin-top: 0;
+  padding-top: 30px;
+  margin-top: 50px;
   padding-bottom: 20px;
   border-bottom: 3px solid white;
+  border: 5px solid #d65656;
 }
 
-#liquors {
-  text-align: center;
+#instructions {
+  margin-top: 60px;
   padding: 20px;
+  font-size: 20px;
 }
 
-#mainText {
-  text-align: center;
-  padding: 20px;
+#banner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  margin: 20px auto;
+  background: #353a40; 
+  border-radius: 20px;
+  box-shadow: 0 9px 15px rgba(212, 86, 86, 0.5);
+  max-width: 1200px; 
 }
 
 .category {
@@ -81,21 +84,33 @@ h1 {
 }
 
 .ingredient {
-  display: inline-block;
-  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 128px;
+  margin: 15px;
 }
 
 .ingredient label {
   cursor: pointer;
   display: block;
+  width: 128px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 5px;
+  transition: transform 0.3s;
+  margin-bottom: 10;
+}
+
+.ingredient label:hover {
+  transform: scale(1.1);
 }
 
 .ingredient img {
   display: block;
   margin: 0 auto;
   width: 128px;
-  height: auto;
+  height: 128px;
 }
 
 .ingredient input[type="checkbox"] {
@@ -107,4 +122,15 @@ h1 {
 .ingredient span {
   display: block;
   margin-top: 10px;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  text-align: center;
+  padding: 1em;
 }
