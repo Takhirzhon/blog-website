@@ -3,7 +3,7 @@
 
 <head>
     <title>Ingredients</title>
-    <link rel="stylesheet" type="text/css" href="styleingredients.css">
+    <link rel="stylesheet" type="text/css" href="css/ingredients.css">
 </head>
 
 <body>
@@ -245,27 +245,15 @@
         </div>
     </section>
 
+
     <div class="button-container">
         <button onclick="makeCocktail()">Make My Cocktail</button>
     </div>
-    
 
-    <script>
-        function makeCocktail() {
-            const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
-            let selectedIngredients = [];
-            checkboxes.forEach((checkbox) => {
-                selectedIngredients.push(checkbox.nextElementSibling.textContent.trim());
-            });
+<div id="toast-container"></div>
 
-            if (selectedIngredients.length > 0) {
-                document.getElementById('result').innerHTML = "Based on your selections, here are some cocktail ideas:<br>" + selectedIngredients.join(", ");
-            } else {
-                document.getElementById('result').innerHTML = "Please select some ingredients first.";
-            }
-        }
-    </script>
 
+    <script src="resultscript.js"></script>
 
     <footer id="copyright">
         <p>&copy; 2024 Tokhirzhon the Dragonborn

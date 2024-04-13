@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cocktail Result</title>
+    <link rel="stylesheet" type="text/css" href="css/result.css">
+</head>
+<body>
+    <div id="cocktailResult"></div>
+    <script>
+        window.onload = function() {
+            // Retrieve the cocktail name from local storage
+            let cocktailName = localStorage.getItem('cocktailName');
+
+            // Display the cocktail name
+            document.getElementById('cocktailResult').innerText = cocktailName;
+        };
+    </script>
+</body>
+</html>
