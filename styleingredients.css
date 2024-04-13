@@ -74,6 +74,10 @@ h5 {
   border: 5px solid rgba(23, 252, 230, 0.5);
 }
 
+h6 {
+  border: 5px solid #f64e61;
+}
+
 #instructions {
   align-items: center;
   padding: 40px;
@@ -83,7 +87,7 @@ h5 {
   max-width: 1200px;
 }
 
-#banner, #banner2, #banner3, #banner4 {
+#banner, #banner2, #banner3, #banner4, #banner5 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -109,6 +113,10 @@ h5 {
 
 #banner4 {
   box-shadow: 0 9px 15px rgba(23, 252, 230, 0.5);
+}
+
+#banner5 {
+  box-shadow: 0 9px 15px rgba(246, 78, 97, 0.5);
 }
 
 .category {
@@ -156,6 +164,40 @@ h5 {
   margin-top: 10px;
   text-align: center;
 }
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  margin: 20px 0;
+}
+
+button {
+  background-color: #d65656;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  outline: none;
+}
+
+button:hover {
+  background-color: #f07c82;
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button:focus {
+  box-shadow: 0 0 0 3px rgba(216, 86, 86, 0.5);
+}
+
 
 footer {
   margin-top: 60px;

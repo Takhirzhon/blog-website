@@ -89,7 +89,7 @@
             <label for="ginger ale">
                 <img src="images/gingerale.png" alt="Ginger Ale">
                 <input type="checkbox" id="ginger ale" name="mixer" value="ginger ale">
-                <span>Ginger Ale</span>  
+                <span>Ginger Ale</span>
             </label>
         </div>
         <div class="ingredient">
@@ -103,7 +103,7 @@
             <label for="lemon-lime">
                 <img src="images/lemonlime.png" alt="Lemon Lime">
                 <input type="checkbox" id="lemon-lime" name="mixer" value="lemon-lime">
-                <span>Lemon Lime</span>  
+                <span>Lemon Lime</span>
         </div>
         <div class="ingredient">
             <label for="cola">
@@ -111,7 +111,7 @@
                 <input type="checkbox" id="cola" name="mixer" value="cola">
                 <span>Cola</span>
             </label>
-            </div>
+        </div>
     </section>
 
     <h4 id="mainText">Liqueurs</h4>
@@ -134,7 +134,7 @@
             <label for="cherry">
                 <img src="images/cherry.png" alt="Cherry">
                 <input type="checkbox" id="cherry" name="mixer" value="cherry">
-                <span>Cherry</span> 
+                <span>Cherry</span>
             </label>
         </div>
         <div class="ingredient">
@@ -195,11 +195,77 @@
                 <input type="checkbox" id="peach" name="mixer" value="peach">
                 <span>Peach</span>
             </label>
-        </div>  
+        </div>
     </section>
+
+    <h6 id="mainText">Others</h6>
+    <section id="banner5">
+        <div class="ingredient">
+            <label for="vermouthdry">
+                <img src="images/vermouthdry.png" alt="Vermouth Dry">
+                <input type="checkbox" id="vermouthdry" name="mixer" value="vermouthdry">
+                <span>Vermouth Dry</span>
+            </label>
+        </div>
+        <div class="ingredient">
+            <label for="vermouthsweet">
+                <img src="images/vermouthsweet.png" alt="Vermouth Sweet">
+                <input type="checkbox" id="vermouthsweet" name="mixer" value="vermouthsweet">
+                <span>Vermouth Sweet</span>
+            </label>
+        </div>
+        <div class="ingredient">
+            <label for="mint">
+                <img src="images/mint.png" alt="Mint">
+                <input type="checkbox" id="mint" name="mixer" value="mint">
+                <span>Mint</span>
+            </label>
+        </div>
+        <div class="ingredient">
+            <label for="irishcream">
+                <img src="images/irishcream.png" alt="Irish Cream">
+                <input type="checkbox" id="irishcream" name="mixer" value="irishcream">
+                <span>Irish Cream</span>
+        </div>
+
+        <div class="ingredient">
+            <label for="coconut">
+                <img src="images/coconut.png" alt="Coconut">
+                <input type="checkbox" id="coconut" name="mixer" value="coconut">
+                <span>Coconut</span>
+            </label>
+        </div>
+
+        <div class="ingredient">
+            <label for="champagne">
+                <img src="images/champagne.png" alt="Champagne">
+                <input type="checkbox" id="champagne" name="mixer" value="champagne">
+                <span>Champagne</span>
+            </label>
+        </div>
+    </section>
+
+    <div class="button-container">
+        <button onclick="makeCocktail()">Make My Cocktail</button>
+    </div>
     
 
-    
+    <script>
+        function makeCocktail() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+            let selectedIngredients = [];
+            checkboxes.forEach((checkbox) => {
+                selectedIngredients.push(checkbox.nextElementSibling.textContent.trim());
+            });
+
+            if (selectedIngredients.length > 0) {
+                document.getElementById('result').innerHTML = "Based on your selections, here are some cocktail ideas:<br>" + selectedIngredients.join(", ");
+            } else {
+                document.getElementById('result').innerHTML = "Please select some ingredients first.";
+            }
+        }
+    </script>
+
 
     <footer id="copyright">
         <p>&copy; 2024 Tokhirzhon the Dragonborn
