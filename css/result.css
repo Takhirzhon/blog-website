@@ -23,7 +23,6 @@ html {
     margin: auto;
     padding: 20px;
     margin-top: 20px;
-    background: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
@@ -36,7 +35,7 @@ html {
 
 .header h1 {
     font-size: 2.5rem;
-    color: #27496d;
+    color: white;
 }
 
 .result-container {
@@ -124,6 +123,7 @@ html {
 
 p {
     font-size: 1.2rem;
+    color: white;
     text-align: center;
 }
 
@@ -135,10 +135,11 @@ footer {
     background-color: #333;
     padding: 1em;
     color: white;
-  }
-/* Responsive Design */
+}
+
 @media (max-width: 768px) {
     .container {
+        color: white;
         width: 90%;
     }
 

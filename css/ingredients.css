@@ -1,6 +1,6 @@
 body {
   font-family: 'Poppins', sans-serif;
-  background: #252839;
+  background: #2b2024;
   color: #fff;
   margin: 0;
   padding: 0;
@@ -45,37 +45,47 @@ body {
   background-color: #555;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  display: block;
+  margin: auto;
+  width: fit-content;
   color: white;
   text-align: center;
   font-size: 2.5em;
   margin-top: 50px;
   padding-top: 30px;
   padding-bottom: 20px;
+  border-radius: 10px;
+  border-bottom: 5px solid;
 }
 
-h1{
-  border: 5px solid #ffffff;
+h1 {
+  border-bottom-color: #ffffff;
 }
 
 h2 {
-  border: 5px solid #d65656;
+  border-bottom-color: #d65656;
 }
 
 h3 {
-  border: 5px solid rgba(0, 8, 255, 0.5);
+  border-bottom-color: rgba(0, 8, 255, 0.5);
 }
 
 h4 {
-  border: 5px solid rgba(16, 164, 0, 0.5);
+  border-bottom-color: rgba(16, 164, 0, 0.5);
 }
 
 h5 {
-  border: 5px solid rgba(23, 252, 230, 0.5);
+  border-bottom-color: rgba(23, 252, 230, 0.5);
 }
 
 h6 {
-  border: 5px solid #f64e61;
+  border-bottom-color: rgba(246, 78, 97, 0.5);
 }
 
 #instructions {
@@ -87,7 +97,11 @@ h6 {
   max-width: 1200px;
 }
 
-#banner, #banner2, #banner3, #banner4, #banner5 {
+#banner,
+#banner2,
+#banner3,
+#banner4,
+#banner5 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -231,7 +245,6 @@ footer {
   padding: 1em;
 }
 
-/* Table and general modal styling */
 .modal {
   position: fixed;
   z-index: 50;
@@ -240,46 +253,47 @@ footer {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4); /* Dim the background */
-  display: none; /* Hidden by default */
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
 }
 
 .table {
-  background: #b5b2ba; /* Brighter background for better readability */
-  width: 90%; /* Slightly smaller width for better margin */
-  margin: 20px auto; /* Center the table and add vertical space */
+  background: #b5b2ba;
+  width: 90%;
+  margin: 20px auto;
   border-collapse: collapse;
   font-size: 16px;
-  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
 }
 
 .table thead th {
-  color: #000000; /* White text */
+  color: #000000;
   font-weight: bold;
   text-align: center;
-  padding: 15px; /* Uniform padding */
-  border-bottom: 2px solid #ddd; /* Strong line under headers */
+  padding: 15px;
+  border-bottom: 2px solid #ddd;
 }
 
 .table tbody tr:nth-child(even) {
-  background-color: #b5b2ba; /* Lighter color for even rows */
+  background-color: #b5b2ba;
 }
 
 .table tbody tr:hover {
-  background-color: #b5b2ba; /* Light green for hover */
+  background-color: #b5b2ba;
 }
 
-.table td, .table th {
-  padding: 12px; /* Good padding for spacing */
-  text-align: center; /* Center align the text */
-  border-bottom: 1px solid #ddd; /* Subtle separation */
+.table td,
+.table th {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
 }
 
 .modal header {
-  background: #141d73; /* Header background */
-  color: white; /* Header text color */
+  background: #141d73;
+  color: white;
   padding: 10px;
-  font-size: 20px; /* Bigger text for the header */
+  font-size: 20px;
 }
 
 .modal header span {
@@ -288,13 +302,13 @@ footer {
   cursor: pointer;
 }
 
-/* Responsive adjustments */
 @media (max-width: 600px) {
   .table {
-      font-size: 14px; /* Smaller font size on small screens */
+    font-size: 14px;
   }
-  .table th, .table td {
-      padding: 10px; /* Smaller padding on small screens */
+
+  .table th,
+  .table td {
+    padding: 10px;
   }
 }
-
