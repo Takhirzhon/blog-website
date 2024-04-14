@@ -96,15 +96,12 @@ function determineCocktail(ingredients) {
     return uniqueCocktails.length > 0 ? uniqueCocktails.join(', ') : 'No cocktails found for selected ingredients';
 }
 
-// Add this code to your resultscript.js or between <script> tags in the HTML.
 
-// This function toggles the visibility of the modal
 function toggleModal() {
     var modal = document.getElementById('IngRefGuide');
     modal.style.display = (modal.style.display === 'none' ? 'block' : 'none');
 }
 
-// This function closes the modal if the user clicks outside of the modal content
 window.onclick = function(event) {
     var modal = document.getElementById('IngRefGuide');
     if (event.target === modal) {
