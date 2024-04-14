@@ -15,7 +15,7 @@
   align-items: center;
   color:#252839;
   justify-content: center;
-  font-family: Popins, sans-serif;
+  font-family: 'Georgia', serif;
 }
 
 #mainText {
@@ -30,8 +30,8 @@
 
 
 body {
-  font-family: Popins, sans-serif;
-  background: #252839;
+  font-family: 'Georgia', serif;
+  background: #2b2024;
   margin: 0;
   padding: 0;
 }
