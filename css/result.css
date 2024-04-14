@@ -1,0 +1,122 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: linear-gradient(to right, #6dd5ed, #2193b0);
+    color: #333;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.header, .footer {
+    text-align: center;
+    padding: 15px 0;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    color: #27496d;
+}
+
+.result-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.result-box {
+    margin: 30px 0;
+    padding: 50px;
+    border-radius: 10px;
+    background: #f0f8ff;
+    border: 1px solid #ddd;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.result-box:hover {
+    transform: scale(1.02);
+}
+
+.action-button {
+    background-color: #27496d;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.action-button:hover {
+    background-color: #0f609b;
+}
+
+.footer p {
+    font-size: 1rem;
+    color: #27496d;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .header h1, .footer p {
+        font-size: 1.5rem;
+    }
+}
+
+/* Existing styles */
+/* Add these new styles */
+.cocktail-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.social-share button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.social-share button:hover {
+    background-color: #45a049;
+}

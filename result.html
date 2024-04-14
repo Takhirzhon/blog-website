@@ -2,19 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Cocktail Result</title>
-    <link rel="stylesheet" type="text/css" href="css/result.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cocktail Explorer</title>
+    <link rel="stylesheet" href="css/result.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
-    <div id="cocktailResult"></div>
+    <div class="container">
+        <header class="header">
+            <h1>Your Cocktail</h1>
+        </header>
+        <main class="result-container">
+            <div id="cocktailResult" class="result-box">
+                <!-- Dynamic content will be loaded here -->
+                <img id="cocktailImage" src="" alt="Cocktail Image" class="cocktail-image">
+                <p id="cocktailDesc"></p>
+            </div>
+            <button class="action-button" onclick="window.history.back()">Choose Different Ingredients</button>
+            <div class="social-share">
+                <button onclick="shareOnSocialMedia()">Share on Facebook</button>
+                <!-- More social buttons can be added here -->
+            </div>
+        </main>
+        <footer class="footer">
+            <p>Discover your perfect cocktail with us!</p>
+        </footer>
+    </div>
     <script>
         window.onload = function() {
-            // Retrieve the cocktail name from local storage
-            let cocktailName = localStorage.getItem('cocktailName');
+    // Retrieve the cocktail name and details from local storage or API
+    let cocktailName = localStorage.getItem('cocktailName');
+    let cocktailDetails = fetchCocktailDetails(cocktailName);
 
-            // Display the cocktail name
-            document.getElementById('cocktailResult').innerText = cocktailName;
-        };
+    // Display the cocktail name, image, and description
+    document.getElementById('cocktailResult').innerText = cocktailName;
+    document.getElementById('cocktailImage').src = cocktailDetails.image;
+    document.getElementById('cocktailDesc').innerText = cocktailDetails.description;
+};
+
+function fetchCocktailDetails(cocktailName) {
+    // Fetch cocktail details from an API or local database
+    // For demonstration, using static data
+    return {
+        image: 'path/to/cocktail/image.jpg',
+        description: 'A refreshing cocktail perfect for summer evenings...'
+    };
+}
+
+function shareOnSocialMedia() {
+    // Implement social media sharing functionality
+    alert('Feature to be implemented.');
+}
+
     </script>
 </body>
 </html>
