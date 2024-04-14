@@ -112,20 +112,12 @@ body {
   background-color: #555;
 }
 
-#copyright {
-  display: block;
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  transition: background-color 0.3s;
+footer {
+  margin-top: 60px;
   text-align: center;
   position: relative;
   bottom: 0;
   background-color: #333;
-  text-align: center;
   padding: 1em;
-}
-
-#copyright a:hover {
-  background-color: #555;
+  color: white;
 }

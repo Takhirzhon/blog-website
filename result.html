@@ -1,59 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cocktail Explorer</title>
     <link rel="stylesheet" href="css/result.css">
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
+
 <body>
+    <navbar id="topbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="ingredients.html">Ingredients</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </navbar>
     <div class="container">
         <header class="header">
             <h1>Your Cocktail</h1>
         </header>
         <main class="result-container">
             <div id="cocktailResult" class="result-box">
-                <!-- Dynamic content will be loaded here -->
-                <img id="cocktailImage" src="" alt="Cocktail Image" class="cocktail-image">
-                <p id="cocktailDesc"></p>
             </div>
             <button class="action-button" onclick="window.history.back()">Choose Different Ingredients</button>
-            <div class="social-share">
-                <button onclick="shareOnSocialMedia()">Share on Facebook</button>
-                <!-- More social buttons can be added here -->
-            </div>
         </main>
-        <footer class="footer">
-            <p>Discover your perfect cocktail with us!</p>
-        </footer>
+        <p>Discover your perfect cocktail with us!</p>
     </div>
+
+    <footer id="copyright">
+        <p>&copy; 2024 Tokhirzhon the Dragonborn
+            <br>The Greybeards' Sanctum
+            <br>High Hrothgar, Throat of the World
+            <br>Whiterun Hold, Skyrim
+            <br>Phone: 555-555-5555
+        </p>
+    </footer>
     <script>
-        window.onload = function() {
-    // Retrieve the cocktail name and details from local storage or API
-    let cocktailName = localStorage.getItem('cocktailName');
-    let cocktailDetails = fetchCocktailDetails(cocktailName);
+        window.onload = function () {
+            let cocktailName = localStorage.getItem('cocktailName');
+            let cocktailDetails = cocktailName ? JSON.parse(localStorage.getItem('cocktailDetails')) : null;
 
-    // Display the cocktail name, image, and description
-    document.getElementById('cocktailResult').innerText = cocktailName;
-    document.getElementById('cocktailImage').src = cocktailDetails.image;
-    document.getElementById('cocktailDesc').innerText = cocktailDetails.description;
-};
-
-function fetchCocktailDetails(cocktailName) {
-    // Fetch cocktail details from an API or local database
-    // For demonstration, using static data
-    return {
-        image: 'path/to/cocktail/image.jpg',
-        description: 'A refreshing cocktail perfect for summer evenings...'
-    };
-}
-
-function shareOnSocialMedia() {
-    // Implement social media sharing functionality
-    alert('Feature to be implemented.');
-}
+            document.getElementById('cocktailResult').innerText = cocktailName;
+        };
 
     </script>
+
+    
 </body>
+
 </html>

@@ -21,8 +21,131 @@
         <p>1. Select each ingredient you have readily available by clicking each picture below</p>
         <p>2. Be sure to select at least one alcohol and one mixer</p>
         <p>3. Press the "Make My Cocktail" button to search your available cocktails</p>
+        <p onclick="toggleModal()">4. If something
+            is missing in our list, check this <u>Ingredient Reference Guide</u></p>
+        <div id="IngRefGuide" class="modal">
+            <div>
+                <header><span onclick="toggleModal()">×</span>
+                    <h4>Make My Cocktail - Ingredient Reference Guide</h4>
+                </header>
+                <div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th style="text-align:center;width:30%">Category</th>
+                                <th style="text-align:center;width:70%">Popular Brands/Variants</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="w3-light-grey">
+                                <td>Almond Liqueur</td>
+                                <td>Amaretto, Creme De Noyaux</td>
+                            </tr>
+                            <tr class="w3-light-grey">
+                                <td>Almond Syrup</td>
+                                <td>Orgeat Syrup</td>
+                            </tr>
+                            <tr class="w3-light-grey">
+                                <td>Bitters</td>
+                                <td>Aromatic, Angostura, Celery, Fruit, Herbal, Orange, Peychaud, Spicy</td>
+                            </tr>
+                            <tr class="w3-light-grey">
+                                <td>Brandy</td>
+                                <td>Armagnac, Armenian, Brandy de Jerez, Calvados, Cognac, Cypriot, Obstler, Pomace,
+                                    Pisco, South African, Stravecchio</td>
+                            </tr>
+                            <tr class="w3-light-grey">
+                                <td>Champagne</td>
+                                <td>Sparkling Wine</td>
+                            </tr>
+                            <tr class="w3-light-grey">
+                                <td>Cherry Liqueur</td>
+                                <td>Cherry Brandy, Cherry Heering</td>
+                            </tr>
+                            <tr class="w3-light-grey">
+                                <td>Chocolate Liqueur</td>
+                                <td>Creme De Cacao</td>
+                            </tr>
+                            <tr class="w3-light-grey">
+                                <td>Coconut Liqueur</td>
+                                <td>Coconut Rum, Malibu</td>
+                            </tr>
+                            <tr class="w3-light-grey">
+                                <td>Coffee Liqueur</td>
+                                <td>Coffee Brandy, Kahlua, Tai Maria</td>
+                            </tr>
+                            <tr class="w3-light-grey">
+                                <td>Gin</td>
+                                <td>Genever, London Dry, Old Tom, Plymouth</td>
+                            </tr>
+                            <tr class="w3-light-grey">
+                                <td>Herbal Liqueur</td>
+                                <td>Absinthe, Aguardiente, Anis del Toro, Anisette, Arak, Galliano, Herbsaint, Mastika,
+                                    Oghi, Ouzo, Pastis, Patxaran, Pernod, Raki, Sambuca, Tsipouro, Xtabentun</td>
+                            </tr>
+                            <tr class="w3-light-grey">
+                                <td>Irish Cream</td>
+                                <td>Baileys</td>
+                            </tr>
+                            <tr class="w3-light-grey">
+                                <td>Lemon-Lime Soda</td>
+                                <td>7-Up, Sierra Mist, Sprite</td>
+                            </tr>
+                            <tr class="w3-light-grey">
+                                <td>Melon Liqueur</td>
+                                <td>Midori</td>
+                            </tr>
+                            <tr class="w3-light-grey">
+                                <td>Mint Liqueur</td>
+                                <td>Creme De Menthe</td>
+                            </tr>
+                            <tr class="w3-light-grey">
+                                <td>Orange Liqueur</td>
+                                <td>Blue Curacao, Cointreau, Curacao, Grand Marnier, Triple Sec</td>
+                            </tr>
+                            <tr class="w3-light-grey">
+                                <td>Raspberry Liqueur</td>
+                                <td>Chambord</td>
+                            </tr>
+                            <tr class="w3-light-grey">
+                                <td>Rum</td>
+                                <td>Aged, Blanco, Black, Dark, Gold, Navy, Overproof, White</td>
+                            </tr>
+                            <tr class="w3-light-grey">
+                                <td>Simple Syrup</td>
+                                <td>Sugar Syrup</td>
+                            </tr>
+                            <tr class="w3-light-grey">
+                                <td>Sloe Berry Liqueur</td>
+                                <td>Sloe Gin</td>
+                            </tr>
+                            <tr class="w3-light-grey">
+                                <td>Soda Water</td>
+                                <td>Carbonated Water, Club Soda, Seltzer, Sparkling Water</td>
+                            </tr>
+                            <tr class="w3-light-grey">
+                                <td>Sweet Vermouth</td>
+                                <td>Red, Rojo, Rosso</td>
+                            </tr>
+                            <tr class="w3-light-grey">
+                                <td>Tequila</td>
+                                <td>Anejo, Blacno, Joven, Reposado</td>
+                            </tr>
+                            <tr class="w3-light-grey">
+                                <td>Whiskey</td>
+                                <td>Blended, Bourbon, Canadian, Irish, Rye, Scotch, Straight</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="w3-container w3-theme-l1">
+                    <p>Something missing?<br><br>We don't list certain ingredients which are found in very select
+                        recipes or ingredients commonly found in most homes (e.g., sugar, salt, water).</p>
+                </div>
+            </div>
+        </div>
     </div>
-
+    
     <h2 id="mainText">Spirits</h2>
     <section id="banner">
         <div class="ingredient">
@@ -258,10 +381,12 @@
         <button onclick="makeCocktail()">Make My Cocktail</button>
     </div>
 
-<div id="toast-container"></div>
+    <div id="toast-container"></div>
 
 
-    <script src="js/resultscript.js"></script>
+    <script src="js/resultscript.js">
+
+    </script>
 
     <footer id="copyright">
         <p>&copy; 2024 Tokhirzhon the Dragonborn

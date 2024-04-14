@@ -8,7 +8,7 @@ function makeCocktail() {
 
     if (selectedIngredients.length === 0) {
         showToast('No ingredients selected. Please select at least one alcohol and one mixer.');
-        return; // Exit the function without redirecting
+        return;
     }
 
     let cocktailName = determineCocktail(selectedIngredients);
@@ -80,26 +80,36 @@ function determineCocktail(ingredients) {
         'Tequila,Vermouth Sweet,Bitters': 'Tequila Manhattan',
         'Tequila,Vermouth Dry': 'Tequini',
         'Whiskey,Almond Liqueur': 'The Godfather',
-
-
-
     };
 
     let possibleCocktails = [];
 
-    // Check each cocktail recipe
     for (let recipe in cocktailMap) {
         let ingredientsNeeded = recipe.split(',');
-        // Check if all ingredients in the recipe are in the selected ingredients
         if (ingredientsNeeded.every(ing => ingredients.includes(ing))) {
             possibleCocktails.push(cocktailMap[recipe]);
         }
     }
 
-    // Remove duplicates and return results
     const uniqueCocktails = [...new Set(possibleCocktails)];
 
     return uniqueCocktails.length > 0 ? uniqueCocktails.join(', ') : 'No cocktails found for selected ingredients';
+}
+
+// Add this code to your resultscript.js or between <script> tags in the HTML.
+
+// This function toggles the visibility of the modal
+function toggleModal() {
+    var modal = document.getElementById('IngRefGuide');
+    modal.style.display = (modal.style.display === 'none' ? 'block' : 'none');
+}
+
+// This function closes the modal if the user clicks outside of the modal content
+window.onclick = function(event) {
+    var modal = document.getElementById('IngRefGuide');
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
 }
 
 
@@ -110,11 +120,8 @@ function showToast(message) {
     toast.textContent = message;
 
     toastContainer.appendChild(toast);
-    // Show the toast
     setTimeout(() => { toast.classList.add('show'); }, 100);
 
-    // Hide the toast after 3 seconds
     setTimeout(() => { toast.classList.remove('show'); }, 3000);
-    // Remove the toast from DOM after it's hidden
     setTimeout(() => { toastContainer.removeChild(toast); }, 3500);
 }
